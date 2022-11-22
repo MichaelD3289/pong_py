@@ -1,9 +1,18 @@
 import unittest
 
+from gameboard import Gameboard
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+
+class TestGameboard(unittest.TestCase):
+    def __init__(self):
+        self.gameboard = Gameboard()
+
+    def has_needed_attributes(self):
+        height = self.gameboard.window_height()
+        width = self.gameboard.window_width()
+
+        self.assertEqual(height, 600)
+        self.assertEqual(width, 600)
 
 
 if __name__ == '__main__':
