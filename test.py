@@ -1,6 +1,6 @@
 import unittest
 
-from gameboard import Gameboard
+from scoreboard import Gameboard
 
 
 class TestGameboard(unittest.TestCase):

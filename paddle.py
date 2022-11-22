@@ -11,19 +11,15 @@ class Paddle(Turtle):
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.penup()
         self.goto(cor)
-        self.update()
-
-    def update(self):
-        screen.update()
 
     def move_up(self):
-        new_y = self.ycor() + 20
+        new_y = self.ycor() + 25
         self.goto(self.xcor(), new_y)
-        self.update()
 
     def move_down(self):
-        new_y = self.ycor() - 20
+        new_y = self.ycor() - 25
         self.goto(self.xcor(), new_y)
-        self.update()
 
+    def reset(self, pos):
+        self.goto(pos)
 
